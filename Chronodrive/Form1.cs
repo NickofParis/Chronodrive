@@ -29,6 +29,8 @@ namespace Chronodrive
         public Form1()
         {
             InitializeComponent();
+            label1.Visible = false;
+            textBoxId.Visible = false;
             textBoxId.Enabled = false;
         }
 
@@ -245,10 +247,13 @@ namespace Chronodrive
             if (openFileDialogTemplate.ShowDialog() == DialogResult.OK)
             {
                 labelTemplateName.Text = openFileDialogTemplate.SafeFileName;
+                label1.Visible = true;
+                textBoxId.Visible = true;
+                textBoxId.Enabled = true;
             }
 
             Template = File.ReadAllText(openFileDialogTemplate.FileName, Encoding.UTF8);
-            textBoxId.Enabled = true;
+            
             if(openFileDialogTemplate.SafeFileName == "Employee.xml")
             {
                 label1.Text = "Employé :";

@@ -89,7 +89,6 @@
             this.labelTemplateName.Name = "labelTemplateName";
             this.labelTemplateName.Size = new System.Drawing.Size(155, 25);
             this.labelTemplateName.TabIndex = 6;
-            this.labelTemplateName.Text = "Please Select";
             // 
             // buttonSelectTemplate
             // 
